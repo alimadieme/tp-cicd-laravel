@@ -1,19 +1,8 @@
-<?php
-
-namespace Tests\Feature;
-
-// use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
-
-class ExampleTest extends TestCase
+// Dans tests/Feature/ExampleTest.php
+public function test_the_application_returns_a_successful_response(): void
 {
-    /**
-     * A basic test example.
-     */
-    public function test_the_application_returns_a_successful_response(): void
-    {
-        $response = $this->get('/');
+$response = $this->get('/');
 
-        $response->assertStatus(200);
-    }
+// Remplacer 200 par 500 pour provoquer délibérément une anomalie
+$response->assertStatus(500);
 }
